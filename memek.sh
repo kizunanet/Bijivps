@@ -198,6 +198,7 @@ echo -e "Loading....."
 sleep 3
 clear
 wget https://raw.githubusercontent.com/kizunanet/Bijivps/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/kizunanet/Bijivps/main/ssh/ins-udp && chmod +x ins-udp && ./ins-udp
 clear
 echo -e "\e[33m===================================\033[0m"
 echo -e "$green      Install BACKUP               $NC"
@@ -272,8 +273,9 @@ echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenVPN		: 2086"  | tee -a log-install.txt
 echo "   - OpenSSH		: 22"  | tee -a log-install.txt
-echo "   - SSH Websocket	: 80,8080 [ON]" | tee -a log-install.txt
+echo "   - SSH Websocket	: 80,8080" | tee -a log-install.txt
 echo "   - SSH SSL Websocket	: 443" | tee -a log-install.txt
+echo "   - SSH UDP CUSTOM       : 1-65535" | tee -a log-install.txt
 echo "   - Stunnel4		: 8880, 8443" | tee -a log-install.txt
 echo "   - Dropbear		: 109, 143" | tee -a log-install.txt
 echo "   - Badvpn		: 7100-7900" | tee -a log-install.txt
